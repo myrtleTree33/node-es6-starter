@@ -1,8 +1,8 @@
 
-export default function hello(user = 'World') {
-  return `Hello ${user}!\n`;
+export default function app() {
+    //begin writing your code here
 }
 
 if (require.main === module) {
-  process.stdout.write(hello());
+    app();
 }
