@@ -2,7 +2,7 @@
   "name": "node-es6-starter",
   "version": "1.0.0",
   "description": "Node.js ES6 starter with Babel & ESLint",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "babel": {
     "presets": [
       "es2015"
@@ -21,9 +21,9 @@
   },
   "scripts": {
     "lint": "eslint src/**",
-    "build": "babel --presets es2015 src -d lib",
+    "build": "babel --presets es2015 src -d dist",
     "prepublish": "npm run build",
-    "start": "node lib/",
+    "start": "node dist/",
     "dev": "./node_modules/.bin/babel-node src/",
     "test-cov": "babel-node ./node_modules/.bin/isparta cover _mocha",
     "test": "babel-node ./node_modules/.bin/_mocha"
