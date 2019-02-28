@@ -21,7 +21,7 @@ export default async function transformRepo(input) {
   const ownerId = owner.id;
   const ownerLogin = owner.login;
 
-  const repo = new Repo({
+  const updatedRepo = {
     repoId: id,
     name,
     fullName: full_name,
@@ -39,7 +39,10 @@ export default async function transformRepo(input) {
     createdAt,
     updatedAt,
     pushedAt
-  });
+  };
 
-  return repo.save();
+  return Repo.findOneAndUpdate({ repoId: id }, updatedRepo, {
+    upsert: true,
+    new: true
+  });
 }

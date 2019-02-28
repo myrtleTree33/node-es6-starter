@@ -13,7 +13,7 @@ const profileSchema = new Schema({
     type: String,
     required: true
   },
-  id: {
+  userId: {
     type: String,
     required: true
   },
@@ -45,6 +45,10 @@ const profileSchema = new Schema({
     type: Number,
     required: true
   },
+  numStarredRepos: {
+    type: Number,
+    required: true
+  },
   numPublicGists: {
     type: Number,
     required: true
@@ -65,16 +69,16 @@ const profileSchema = new Schema({
     type: Date,
     required: true
   },
-  publicRepos: {
-    type: Array,
+  followerIds: {
+    type: [String],
     default: []
   },
-  starredRepos: {
-    type: Array,
+  starredRepoIds: {
+    type: [String],
     default: []
   },
-  followers: {
-    type: Array,
+  ownedRepoIds: {
+    type: [String],
     default: []
   }
 });
