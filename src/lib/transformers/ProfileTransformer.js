@@ -37,10 +37,12 @@ export default async function transformProfile(input) {
     updatedAt
   } = input;
 
-  console.log(starredRepos.repos.length);
-  console.log(ownedRepos.repos.length);
-  console.log(followers.length);
-  console.log(commitHistory.length);
+  // console.log(input);
+
+  // console.log(starredRepos.repos.length);
+  // console.log(ownedRepos.repos.length);
+  // console.log(followers.length);
+  // console.log(commitHistory.length);
 
   await saveRepos(ownedRepos.repos);
   await saveRepos(starredRepos.repos);
@@ -68,7 +70,8 @@ export default async function transformProfile(input) {
     ownedRepoIds,
     followerIds,
     createdAt,
-    updatedAt
+    updatedAt,
+    lastScrapedAt: Date.now()
   };
 
   return Profile.findOneAndUpdate({ userId: id }, updatedProfile, {

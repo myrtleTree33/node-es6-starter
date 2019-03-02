@@ -68,6 +68,11 @@ const repoSchema = new Schema({
   pushedAt: {
     type: Date,
     required: true
+  },
+  lastScrapedAt: {
+    type: Date,
+    required: true,
+    default: Date.now
   }
 });
 

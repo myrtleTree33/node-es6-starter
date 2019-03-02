@@ -80,6 +80,11 @@ const profileSchema = new Schema({
   ownedRepoIds: {
     type: [String],
     default: []
+  },
+  lastScrapedAt: {
+    type: Date,
+    required: true,
+    default: Date.now
   }
 });
 

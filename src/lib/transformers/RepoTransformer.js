@@ -38,7 +38,8 @@ export default async function transformRepo(input) {
     language,
     createdAt,
     updatedAt,
-    pushedAt
+    pushedAt,
+    lastScrapedAt: Date.now()
   };
 
   return Repo.findOneAndUpdate({ repoId: id }, updatedRepo, {

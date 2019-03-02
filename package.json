@@ -57,10 +57,12 @@
     "prettier": "^1.14.3"
   },
   "dependencies": {
+    "async-while": "^1.1.0",
+    "await-sleep": "^0.0.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^6.2.0",
-    "moment": "^2.22.2",
+    "moment": "^2.24.0",
     "mongoose": "^5.4.15",
     "mongoose-hidden": "^1.6.1",
     "request": "^2.88.0",
