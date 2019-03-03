@@ -6,20 +6,17 @@ const { Schema } = mongoose;
 
 const profileSchema = new Schema({
   name: {
-    type: String,
-    required: true
+    type: String
   },
   login: {
     type: String,
     required: true
   },
   userId: {
-    type: String,
-    required: true
+    type: String
   },
   htmlUrl: {
-    type: String,
-    required: true
+    type: String
   },
   profilePic: {
     type: String
@@ -35,39 +32,31 @@ const profileSchema = new Schema({
   },
   isHireable: {
     type: Boolean,
-    required: true,
     default: true
   },
   bio: {
     type: String
   },
   numPublicRepos: {
-    type: Number,
-    required: true
+    type: Number
   },
   numStarredRepos: {
-    type: Number,
-    required: true
+    type: Number
   },
   numPublicGists: {
-    type: Number,
-    required: true
+    type: Number
   },
   numFollowers: {
-    type: Number,
-    required: true
+    type: Number
   },
   numFollowing: {
-    type: Number,
-    required: true
+    type: Number
   },
   createdAt: {
-    type: Date,
-    required: true
+    type: Date
   },
   updatedAt: {
-    type: Date,
-    required: true
+    type: Date
   },
   followerIds: {
     type: [String],
@@ -83,7 +72,6 @@ const profileSchema = new Schema({
   },
   lastScrapedAt: {
     type: Date,
-    required: true,
     default: Date.now
   }
 });
