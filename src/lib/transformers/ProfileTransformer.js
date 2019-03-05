@@ -74,7 +74,7 @@ export default async function transformProfile(input) {
     lastScrapedAt: Date.now()
   };
 
-  return Profile.findOneAndUpdate({ userId: id }, updatedProfile, {
+  return Profile.findOneAndUpdate({ login }, updatedProfile, {
     upsert: true,
     new: true
   });

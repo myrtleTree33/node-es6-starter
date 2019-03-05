@@ -10,7 +10,8 @@ const profileSchema = new Schema({
   },
   login: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   userId: {
     type: String
